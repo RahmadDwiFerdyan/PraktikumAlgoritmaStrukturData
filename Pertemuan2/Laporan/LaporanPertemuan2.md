@@ -47,10 +47,30 @@ gantiHarga(hrg: int): int
 ![alt text](<Screenshot 2024-02-19 110213.png>)
 ### 2.2.3 Pertanyaan
 1. Pada class BukuMain, tunjukkan baris kode program yang digunakan untuk proses instansiasi! Apa nama object yang dihasilkan?
->![alt text](<Screenshot 2024-02-19 111630.png>) Nama objek yang dihasilkan adalah "bk1"
+> ![alt text](<Screenshot 2024-02-19 114751.png>)  Nama objek yang dihasilkan adalah "bk1"
 2. Bagaimana cara mengakses atribut dan method dari suatu objek?
 > Cara mengakses atribut adalah dengan mengetikkan (namaObjek).(namaAtribut)  
 Sedangkan untuk mengakses metode adalah dengan mengetikkan (namaObjek).(namaMethod())  
 Contoh : akses atribut -> bk1.judul; akses method -> bk1.tampilan();
 3. Mengapa hasil output pemanggilan method tampilInformasi() pertama dan kedua berbeda?
 > Karena terdapat beberapa pemanggilan methode yang berisikan perintah/ proses untuk mengubah nilai. Dalam kode program ini, terdapat pemanggilan method terjual() untuk mengurangi jumlah stok dan method gantiHarga() untuk mengganti harga.
+
+## 2.3 Percobaan 3: Membuat Konstruktor
+### 2.3.1 Langkah-langkah Percobaan
+### 2.3.2 Verifikasi Hasil Percobaan
+![alt text](<Screenshot 2024-02-19 113930.png>)
+### 2.3.3 Pertanyaan
+1. Pada class Buku di Percobaan 3, tunjukkan baris kode program yang digunakan untuk mendeklarasikan konstruktor berparameter!
+> ![alt text](<Screenshot 2024-02-19 114400.png>)
+2. Perhatikan class BukuMain. Apa sebenarnya yang dilakukan pada baris program berikut?
+![alt text](<Screenshot 2024-02-19 114550.png>)
+> Yang dilakukan oleh program di baris tersebut adalah instansiasi dan mengakses atribut
+3. Hapus konstruktor default pada class Buku, kemudian compile dan run program. Bagaimana hasilnya? Jelaskan mengapa hasilnya demikian!
+>![alt text](<Screenshot 2024-02-19 114953.png>)  
+Hasilnya adalah "undefined". Hal ini disebabkan tidak ada konstruktor khusus yang menjadi acuan dalam menjalankan prosesnya.
+4. Setelah melakukan instansiasi object, apakah method di dalam class Buku harus diakses secara berurutan? Jelaskan alasannya!
+> Ya, jika pengaksesan dilakukan didalam instansiasi. Karena dalam instansiasi memiliki urutan nilai/ tipe data suatu nilai yang telah ditentukan.
+5. Buat object baru dengan nama buku NamaMahasiswa menggunakan konstruktor berparameter dari class Buku!
+>![alt text](<Screenshot 2024-02-19 124608.png>)
+6. Commit dan push kode program ke Github
+
