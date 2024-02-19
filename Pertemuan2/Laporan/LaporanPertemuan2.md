@@ -74,3 +74,6 @@ Hasilnya adalah "undefined". Hal ini disebabkan tidak ada konstruktor khusus yan
 >![alt text](<Screenshot 2024-02-19 124608.png>)
 6. Commit dan push kode program ke Github
 
+## 2.4 Latihan Praktikum
+### 1
+![alt text](<Screenshot 2024-02-19 131919.png>)
