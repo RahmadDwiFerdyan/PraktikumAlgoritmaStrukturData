@@ -19,8 +19,11 @@ public class BukuMain23 {
     bk2.tampilanInformasi();
 
     Buku23 bukuFerdy = new Buku23("Algoritma Struktur Data", "Rahmad Dwi Ferdyan", 111, 23, 21000);
-    bukuFerdy.terjual(11);
+    bukuFerdy.terjual(4);
     bukuFerdy.tampilanInformasi();
-
+    bukuFerdy.hitungHargaTotal(4);
+    bukuFerdy.hitungDiskon(4);
+    bukuFerdy.hitungHargaBayar(4);
+    System.out.println();
     }
 }
