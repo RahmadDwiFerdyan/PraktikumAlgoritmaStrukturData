@@ -6,7 +6,11 @@ public class ArrayObjects {
 
         Scanner sc = new Scanner(System.in);
 
-        for (int i=0; i<3; i++){
+        System.out.print("Masukkan jumlah persegi: ");
+        int iJml = sc.nextInt();
+        System.out.println();
+
+        for (int i=0; i<iJml; i++){
             ppArray[i] = new PersegiPanjang();
             System.out.println("Persegi panjang ke-"+i);
             System.out.print("Masukkan panjang: ");
@@ -15,8 +19,8 @@ public class ArrayObjects {
             ppArray[i].lebar = sc.nextInt();
 
         }
-
-        for (int i=0; i<3; i++){
+        System.out.println();
+        for (int i=0; i<iJml; i++){
             System.out.println("Persegi panjang ke-"+i);
             System.out.println("Panjang: "+ppArray[i].panjang + ", lebar: "+ppArray[i].lebar);
         }
