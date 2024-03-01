@@ -20,7 +20,7 @@ public class MainBangunRuang {
         }
 
         for (int i=0; i<jml; i++){
-            System.out.println("Kerucut ke-"+(i+1));
+            System.out.println("\nKerucut ke-"+(i+1));
             System.out.printf("Luas Permukaan: %.2f cm2", krcArray[i].luasPermukaan());
             System.out.printf("\nVolume: %.2f cm3", krcArray[i].volume());
         }
@@ -42,7 +42,7 @@ public class MainBangunRuang {
         }
     
         for (int i=0; i<jml; i++){
-            System.out.println("Limas ke-"+(i+1));
+            System.out.println("\nLimas ke-"+(i+1));
             System.out.printf("Luas Permukaan: %.2f cm2", lmsArray[i].luasPermukaan());
             System.out.printf("\nVolume: %.2f cm3", lmsArray[i].volume());
         }
@@ -63,7 +63,7 @@ public class MainBangunRuang {
         }
 
         for (int i=0; i<jml; i++){
-            System.out.println("Bola ke-"+(i+1));
+            System.out.println("\nBola ke-"+(i+1));
             System.out.printf("Luas Permukaan: %.2f cm2", blArray[i].luasPermukaan());
             System.out.printf("\nVolume: %.2f cm3", blArray[i].volume());
         }
