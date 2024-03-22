@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan5;
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Faktorial;
 
 public class Faktorial {
     public int nilai;

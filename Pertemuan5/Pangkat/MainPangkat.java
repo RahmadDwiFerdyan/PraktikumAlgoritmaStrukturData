@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan5;
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Pangkat;
 import java.util.Scanner;
 public class MainPangkat {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan5;
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Latihan_Praktikum;
 
 public class Showroom {
     public String merk, tipe;

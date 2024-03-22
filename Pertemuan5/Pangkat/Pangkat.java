@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan5;
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Pangkat;
 
 public class Pangkat {
     public int nilai, pangkat;

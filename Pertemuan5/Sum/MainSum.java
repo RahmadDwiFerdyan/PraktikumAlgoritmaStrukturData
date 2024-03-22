@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan5;
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Sum;
 import java.util.Scanner;
 public class MainSum {
     public static void main(String[] args) {
