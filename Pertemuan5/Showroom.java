@@ -52,8 +52,8 @@ public class Showroom {
 
     double AvgPowers (Showroom [] mobil){
         double total = 0;
-        for (Showroom mb : mobil) {
-            total += mb.top_power;
+        for (int i = 0; i < mobil.length; i++) {
+            total += mobil[i].top_power;
         }
         return total/mobil.length;
     }
