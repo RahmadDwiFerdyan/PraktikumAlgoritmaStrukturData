@@ -14,7 +14,7 @@ public class MainShowroom {
         };
 
         Showroom mbl = new Showroom();
-        System.out.println("=======================================");
+        
         System.out.println("Top acceleration tertinggi  : " + mbl.accelTertinggi(mobil, 0, mobil.length - 1));
         System.out.println("Top acceleration terendah   : " + mbl.accelerationTerendah(mobil, 0, mobil.length - 1));
         System.out.printf("Rata-rata top power         : %.2f", mbl.AvgPowers(mobil));
