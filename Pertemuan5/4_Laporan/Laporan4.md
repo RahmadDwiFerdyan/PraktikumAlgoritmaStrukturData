@@ -84,7 +84,35 @@ for (int i = 0; i < elemen; i++) {
 ```
 
 4. Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan menggunakan switch-case!
+>Modifikasi kode:
+```
+System.out.println("========================");
+        System.out.println("Pilih metode perhitungan pangkat:");
+        System.out.println("1. Brute Force");
+        System.out.println("2. Divide and Conquer");
+        System.out.print("Masukkan pilihan Anda: ");
+        int pilihan = sc.nextInt();
 
+        switch (pilihan) {
+            case 1:
+                System.out.println("\nHASIL PANGKAT - BRUTE FORCE");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
+                            + png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            case 2:
+                System.out.println("\nHASIL PANGKAT - DIVIDE CONQUER");
+                for (int i = 0; i < elemen; i++) {
+                    System.out.println("Hasil dari " + png[i].nilai + " pangkat " + png[i].pangkat + " adalah "
+                            + png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+                }
+                break;
+            default:
+                System.out.println("Pilihan TIDAK VALID!");
+                break;
+        }
+```
 
 ## 4.4 Menghitung Sum Array dengan Algoritma Brute Force dan Divide and Conquer
 ### 4.4.1 Langkah-langkah Percobaan
@@ -93,6 +121,123 @@ for (int i = 0; i < elemen; i++) {
 ### 4.4.3 Pertanyaan
 1. Mengapa terdapat formulasi return value berikut?Jelaskan!
 ![alt text](<Screenshot 2024-03-22 215025.png>)
+> `return lsum + rsum + arr[mid];` digunakan untuk mengembalikan total nilai dengan menjumlah nilai di bagian kiri `(lsum)`, bagian kanan `(rsum)`, dan elemen tengah `(mid)` dari array tersebut.
 2. Kenapa dibutuhkan variable mid pada method TotalDC()?
-3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan dengan program!
+> `mid` dibutuhkan untuk menandai posisi tengah array kemudain membagi array menjadi dua bagian yang lebih kecil, yaitu bagian kiri dan bagian kanan pada setiap pengulangan rekursif. Setela itu, setiap bagian dari array dihitung secara terpisah dan digabungkan lagi di akhir proses.
 
+3. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan dengan program!
+```
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Sum;
+import java.util.Scanner;
+public class MainSum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("================================================================");
+        System.out.println("Program Menghitung Keuntungan Total (Satuan juta; misal: 5.9)");
+
+        System.out.print("Masukkan jumlah perusahaan: ");
+        int elem = sc.nextInt();
+
+        Sum[][] sm = new Sum[elem][];
+        for (int i = 0; i < elem; i++) {
+            System.out.println("================================================================");
+            System.out.print("Masukkan jumlah bulan untuk perusahaan " + (i + 1) + ": ");
+            int elm = sc.nextInt();
+            sm[i] = new Sum[elm];
+
+            for (int j = 0; j < elm; j++) {
+                System.out.print(" > Masukkan keuntungan di bulan ke-" + (j + 1) + ": ");
+                sm[i][j] = new Sum(1);
+                sm[i][j].keuntungan[0] = sc.nextDouble();
+            }
+        }
+
+        System.out.println("================================================================");
+        for (int i = 0; i < elem; i++) {
+            System.out.println(">> PERUSAHAAN " + (i + 1));
+            double[] untung = new double[sm[i].length];
+            for (int j = 0; j < sm[i].length; j++) {
+                untung[j] = sm[i][j].keuntungan[0]; 
+            }
+            System.out.println("== Brute Force ==");
+            System.out.println("Total keuntungan perusahaan selama " + sm[i].length + " bulan   : "
+                    + new Sum(sm[i].length).totalBF(untung));
+                    System.out.println("== Divide Conquer ==");
+            System.out.println("Total keuntungan perusahaan selama " + sm[i].length + " bulan   : "
+                    + new Sum(sm[i].length).totalDC(untung, 0, sm[i].length - 1));
+            System.out.println();
+
+    }
+}
+}
+```
+## 4.5 Latihan Praktikum
+1. Sebuah showroom memiliki daftar mobil dengan data sesuai tabel di bawah ini:
+![alt text](<Screenshot 2024-03-23 001203.png>)
+a) top_acceleration tertinggi menggunakan Divide and Conquer!  
+b) top_acceleration terendah menggunakan Divide and Conquer!  
+c) Rata-rata top_power dari seluruh mobil menggunakan Brute Force!
+> Untuk kode ebih lengkap bisa dilihat di Folder `Latihan_Praktikum`
+```
+package PraktikumAlgoritmaStrukturData.Pertemuan5.Latihan_Praktikum;
+
+public class Showroom {
+    public String merk, tipe;
+    public int tahun, top_accel, top_power;
+
+    Showroom(String merk, String tipe, int tahun, int top_accel, int top_power) {
+        this.merk = merk;
+        this.tipe = tipe;
+        this.tahun = tahun;
+        this.top_accel = top_accel;
+        this.top_power = top_power;
+    }
+
+    public Showroom() {
+
+    }
+
+    int accelTertinggi(Showroom[] mobil, int left, int right) {
+        if (left == right) {
+            return mobil[left].top_accel;
+        } else if (left < right) {
+            int mid = (left + right) / 2;
+            int leftmax = accelTertinggi(mobil, left, mid);
+            int rightmax = accelTertinggi(mobil, mid + 1, right);
+
+            if (leftmax > rightmax) {
+                return leftmax;
+            } else {
+                return rightmax;
+            }
+        }
+        return -1;
+    }
+
+    int accelerationTerendah(Showroom[] mobil, int left, int right) {
+        if (left == right) {
+            return mobil[left].top_accel;
+        } else if (left < right) {
+            int mid = (left + right) / 2;
+            int leftmin = accelerationTerendah(mobil, left, mid);
+            int rightmin = accelerationTerendah(mobil, mid + 1, right);
+
+            if (leftmin < rightmin) {
+                return leftmin;
+            } else {
+                return rightmin;
+            }
+        }
+        return -1;
+    }
+
+    double AvgPowers (Showroom [] mobil){
+        double total = 0;
+        for (int i = 0; i < mobil.length; i++) {
+            total += mobil[i].top_power;
+        }
+        return total/mobil.length;
+    }
+
+}
+```
