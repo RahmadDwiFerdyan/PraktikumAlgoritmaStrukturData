@@ -3,6 +3,11 @@ package PraktikumAlgoritmaStrukturData.Pertemuan5.Pangkat;
 public class Pangkat {
     public int nilai, pangkat;
 
+    Pangkat (int nilai, int pangkat){
+        this.nilai = nilai;
+        this.pangkat = pangkat;
+    }
+
     int pangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i < n; i++) {
