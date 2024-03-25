@@ -1,4 +1,4 @@
-# Laporan Algoritma dan Struktur Data - Pertemuan 3 (Array of Objects)
+# Laporan Algoritma dan Struktur Data - Jobsheet 4 (BrutoForce - Divide Conquer)
 Dosen Pengampu : Septian Enggar Sukmana, S.Pd., M.T.  
 ![alt text](POLINEMA-LOGO.png)
 Nam : Rahmad Dwi Ferdyan  
