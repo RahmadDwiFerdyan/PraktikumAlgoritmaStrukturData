@@ -26,7 +26,7 @@ public class Buku23 {
     }
 
     // modifikasi kode --> method baru dengan nama FindBuku
-    public int findBuku(Buku23[] dataBuku, int cari) {
+    public static int findBuku(Buku23[] dataBuku, int cari) {
         int posisi = -1;
         for (int j = 0; j < dataBuku.length; j++) {
             if (dataBuku[j].kodeBuku == cari) {
