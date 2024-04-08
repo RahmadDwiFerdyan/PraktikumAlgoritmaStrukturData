@@ -26,4 +26,9 @@ public class ArrayObjects {
         }
         
     }
+
+    public static int[] copyOf(int[] positions, int count) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'copyOf'");
+    }
 }

@@ -46,5 +46,24 @@ public class BukuMain23 {
         posisi = data.FindBinarySearch(cari, 0, jumBuku-1); 
         data.tampilPosisi(cari, posisi);
         data.TampilData (cari, posisi);    
+
+        System.out.println("_________________________________");
+        System.out.println("_________________________________");
+        System.out.println("Pencarian data: ");
+        System.out.println("Masukkan judul buku yang dicari: ");
+        System.out.print("Judul buku: ");
+        String cariJudul = s1.nextLine();
+        System.out.println("==================================");
+        System.out.println("*Menggunakan SEQUENTIAL SEARCH");
+        int[] posisiSeqSearch = data.findSeqSearchByTitle(cariJudul);
+        data.tampilPosisiByTitle(cariJudul, posisiSeqSearch);
+        data.tampilDataByTitle(cariJudul, posisiSeqSearch);
+
+        System.out.println("==================================");
+        System.out.println("*Menggunakan BINARY SEARCH");
+        data.mergeSort();
+        int[] posisiBinarySearch = data.findBinarySearchByTitle(cariJudul, 0, jumBuku - 1);
+        data.tampilPosisiByTitle(cariJudul, posisiBinarySearch);
+        data.tampilDataByTitle(cariJudul, posisiBinarySearch);
     }
 }
