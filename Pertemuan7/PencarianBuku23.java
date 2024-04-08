@@ -1,7 +1,5 @@
 package PraktikumAlgoritmaStrukturData.Pertemuan7;
 
-import PraktikumAlgoritmaStrukturData.Pertemuan3.ArrayObjects;
-
 public class PencarianBuku23 {
     Buku23 listBk[] = new Buku23[5];
     int idx;
@@ -53,8 +51,6 @@ public class PencarianBuku23 {
 
         return -1;
     }
-
-    // Sequential search by title
     public int[] findSeqSearchByTitle(String cariJudul) {
         int[] positions = new int[listBk.length];
         int count = 0;
@@ -69,8 +65,6 @@ public class PencarianBuku23 {
         }
         return result;
     }
-
-    // Binary search by title
     public int[] findBinarySearchByTitle(String cariJudul, int left, int right) {
         int mid;
         if (left <= right) {
@@ -155,7 +149,6 @@ public class PencarianBuku23 {
         }
     }
 
-    // Display positions of search results by title
     public void tampilPosisiByTitle(String cariJudul, int[] positions) {
         if (positions.length == 0) {
             System.out.println("Data dengan judul >> " + cariJudul + " << tidak ditemukan");
@@ -166,7 +159,6 @@ public class PencarianBuku23 {
         }
     }
 
-    // Display data of search results by title
     public void tampilDataByTitle(String cariJudul, int[] positions) {
         for (int pos : positions) {
             System.out.println("--------------------------------");
