@@ -30,6 +30,21 @@ public class PencarianBuku23 {
         return posisi;
     }
 
+    public int FindBinarySearch(int cari, int left, int right) {
+        int mid;
+        if (left <= right) {
+            mid = (left + right) / 2;
+            if (listBk[mid].kodeBuku == cari) {
+                return mid;
+            }
+            if (listBk[mid].kodeBuku > cari) {
+                return FindBinarySearch(cari, mid+1, right);
+            }
+                return FindBinarySearch(cari, left, mid-1);
+        }
+        return -1;
+    }
+
 
     public void tampilPosisi(int x, int pos) {
         if (pos != -1) {

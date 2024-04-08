@@ -8,9 +8,9 @@ public class BukuMain23 {
         Scanner s = new Scanner(System.in);
         Scanner s1 = new Scanner(System.in);
 
-        Buku23[] dataBuku = new Buku23[5];
+        PencarianBuku23 data = new PencarianBuku23();
         int jumBuku = 5;
-
+        
         System.out.println("--------------------------------");
         System.out.println("Masukkan data buku secara urut dari kode buku terkecil: ");
         for (int i = 0; i < jumBuku; i++) {
@@ -25,14 +25,9 @@ public class BukuMain23 {
             String pengarang = s1.nextLine();
             System.out.print("Stock       \t: ");
             int stock = s.nextInt();
-
+            
             Buku23 m = new Buku23(kodeBuku, judulBuku, tahunTerbit, pengarang, stock);
-            dataBuku[i] = m;
-        }
-
-        System.out.println("--------------------------------");
-        for (Buku23 buku : dataBuku) {
-            buku.tampilDataBuku();
+            data.tambah(m);
         }
 
         System.out.println("_________________________________");
@@ -41,16 +36,15 @@ public class BukuMain23 {
         System.out.println("Masukkan kode buku yang dicari: ");
         System.out.print("Kode buku: ");
         int cari = s.nextInt();
+        System.out.println("==================================");
         System.out.println("*Menggunakan SEQUENTIAL SEARCH");
-        
-        // modifikasi kode --> method baru dengan nama FindBuku
-        int posisi = Buku23.findBuku(dataBuku, cari);
-
-        if (posisi != -1) {
-            dataBuku[posisi].tampilDataBuku();
-        } else {
-            System.out.println("Kode tidak ditemukan.");
-        }
-        System.out.println("_________________________________");
+        int posisi = data.findSeqSearch(cari);
+        data.tampilPosisi(cari, posisi);
+        data.TampilData (cari, posisi);
+        System.out.println("==================================");
+        System.out.println("*Menggunakan BINARY SEARCH");
+        posisi = data.FindBinarySearch(cari, 0, jumBuku-1); 
+        data.tampilPosisi(cari, posisi);
+        data.TampilData (cari, posisi);    
     }
 }
