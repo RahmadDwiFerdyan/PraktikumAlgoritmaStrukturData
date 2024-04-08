@@ -1,10 +1,10 @@
 package PraktikumAlgoritmaStrukturData.Pertemuan7;
 
 public class Buku23 {
-    int kodeBuku, tahunTerbit, stock;
-    String judulBuku, pengarang;
+    int tahunTerbit, stock;
+    String judulBuku, pengarang, kodeBuku;
     
-    public Buku23(int kodeBuku, String judulBuku, int tahunTerbit, String pengarang, int stock) {
+    public Buku23(String kodeBuku, String judulBuku, int tahunTerbit, String pengarang, int stock) {
         this.kodeBuku = kodeBuku;
         this.judulBuku = judulBuku;
         this.tahunTerbit = tahunTerbit;

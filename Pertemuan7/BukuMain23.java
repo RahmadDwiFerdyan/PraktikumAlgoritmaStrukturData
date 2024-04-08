@@ -16,7 +16,7 @@ public class BukuMain23 {
         for (int i = 0; i < jumBuku; i++) {
             System.out.println("--------------------------------");
             System.out.print("Kode buku   \t: ");
-            int kodeBuku = s.nextInt();
+            String kodeBuku = s1.nextLine();
             System.out.print("Judul Buku  \t: ");
             String judulBuku = s1.nextLine();
             System.out.print("Tahun terbit\t: ");
@@ -35,7 +35,7 @@ public class BukuMain23 {
         System.out.println("Pencarian data: ");
         System.out.println("Masukkan kode buku yang dicari: ");
         System.out.print("Kode buku: ");
-        int cari = s.nextInt();
+        String cari = s1.nextLine();
         System.out.println("==================================");
         System.out.println("*Menggunakan SEQUENTIAL SEARCH");
         int posisi = data.findSeqSearch(cari);
