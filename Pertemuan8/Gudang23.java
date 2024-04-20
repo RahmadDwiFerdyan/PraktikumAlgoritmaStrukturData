@@ -59,4 +59,22 @@ public class Gudang23 {
             System.out.println("Tumpukan barang kosong.");
         }
     }
+
+    public void lihatTeratas(){
+        if(!cekKosong()){
+            System.out.println("Barang teratas: " + tumpukan[top].nama);
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+        }
+    }
+
+    public void ubahKapasitas(int kapasitasBaru){
+        Barang23[] newTumpukan = new Barang23[kapasitasBaru];
+        for (int i = 0; i <= top; i++) {
+            newTumpukan[i] = tumpukan[i];
+        }
+        tumpukan = newTumpukan;
+        size = kapasitasBaru;
+        System.out.println("Kapasitas gudang berhasil diubah menjadi " + kapasitasBaru);
+    }
 }

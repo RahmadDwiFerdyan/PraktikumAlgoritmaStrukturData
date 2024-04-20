@@ -12,7 +12,9 @@ public class Utama23 {
             System.out.println("1. Tambah barang");
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
-            System.out.println("4. Keluar");
+            System.out.println("4. Lihat barang teratas");
+            System.out.println("5. Ubah kapasitas gudang");
+            System.out.println("6. Keluar");
             System.out.println("--------------------------------");
             System.out.print("Pilih operasi: ");
             int pilihan = scanner.nextInt();
@@ -39,6 +41,13 @@ public class Utama23 {
                     gudang.tampilkanBarang();
 
                 case 4:
+                    gudang.lihatTeratas();
+                    break;
+
+                case 5:
+                System.out.print("Masukkan kapasitas baru gudang: ");
+                    int kapasitasBaru = scanner.nextInt();
+                    gudang.ubahKapasitas(kapasitasBaru);
                     break;
 
                 default:
