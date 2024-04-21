@@ -92,4 +92,40 @@ public class Gudang23 {
         }
         return biner;
     }
+
+    public void lihatTerbawah() {
+        if (!cekKosong()) {
+            System.out.println("Barang terbawah: " + tumpukan[0].nama);
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+        }
+    }
+
+    public void cariBarangByKode(int kodeBarang) {
+        boolean found = false;
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].kode == kodeBarang) {
+                System.out.println("Barang dengan kode " + kodeBarang + " ditemukan: " + tumpukan[i].nama);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Barang dengan kode " + kodeBarang + " tidak ditemukan.");
+        }
+    }
+
+    public void cariBarangByNama(String namaBarang) {
+        boolean found = false;
+        for (int i = 0; i <= top; i++) {
+            if (tumpukan[i].nama.equalsIgnoreCase(namaBarang)) {
+                System.out.println("Barang dengan nama " + namaBarang + " ditemukan: " + tumpukan[i].nama);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("Barang dengan kode " + namaBarang + " tidak ditemukan.");
+        }
+    }
 }
