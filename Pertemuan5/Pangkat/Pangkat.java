@@ -28,4 +28,11 @@ public class Pangkat {
         }
     }
 
+//pangkatDC(5, 3) = pangkatDC(5, 1) * pangkatDC(5, 1) * 5
+//= (pangkatDC(5, 0) * pangkatDC(5, 0) * 5) * (pangkatDC(5, 0) * pangkatDC(5, 0) * 5) * 5
+//= (1 * 1 * 5) * (1 * 1 * 5) * 5
+//= 5 * 5 * 5
+//= 125
+
+
 }

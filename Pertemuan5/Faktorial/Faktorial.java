@@ -21,3 +21,9 @@ public class Faktorial {
     }
 
 }
+
+//= 5 * faktorialDC(4)
+//= 5 * (4 * faktorialDC(3))
+//= 5 * (4 * (3 * faktorialDC(2))))
+//= 5 * (4 * (3 * (2 * faktorialDC(1)))))
+//= 5 * (4 * (3 * (2 * 1))))
