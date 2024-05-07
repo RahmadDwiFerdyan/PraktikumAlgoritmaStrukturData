@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan11;
+package PraktikumAlgoritmaStrukturData.Pertemuan11.praktikum;
 
 public class SingleLinkedList {
     Node head, tail;

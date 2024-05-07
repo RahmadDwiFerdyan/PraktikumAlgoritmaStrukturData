@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan11;
+package PraktikumAlgoritmaStrukturData.Pertemuan11.praktikum;
 
 public class SLLMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan11;
+package PraktikumAlgoritmaStrukturData.Pertemuan11.praktikum;
 
 public class Node {
     int data;
