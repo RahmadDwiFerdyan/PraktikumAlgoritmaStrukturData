@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan11.tugas;
+package PraktikumAlgoritmaStrukturData.Pertemuan11.tugas.tugasno1;
 
 public class mahasiswaMain {
     public static void main(String[] args) {
