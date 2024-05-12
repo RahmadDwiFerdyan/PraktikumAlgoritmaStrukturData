@@ -3,6 +3,7 @@ package PraktikumAlgoritmaStrukturData.Pertemuan11.tugas.tugasNo2;
 public class antrianMain {
     public static void main(String[] args) {
         QueueLinkedList queue = new QueueLinkedList();
+        System.out.println("## Antrian:");
         queue.enqueue(111, "Anton");
         queue.print();
         queue.enqueue(112, "Prita");
@@ -15,11 +16,11 @@ public class antrianMain {
         queue.print();
         System.out.println();
 
-        System.out.println("Elemen di depan antrian: " + queue.peek());
+        System.out.println("## Elemen di depan antrian (peek): " + queue.peek());
         queue.dequeue();
 
         System.out.println();
-        System.out.println("Antrian setelah dequeue");
+        System.out.println("## Antrian setelah dequeue");
         queue.print();
         System.out.println();
     }
