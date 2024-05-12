@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan11.tugas;
+package PraktikumAlgoritmaStrukturData.Pertemuan11.tugas.tugasNo2;
 
 public class QueueLinkedList {
     private antrianNode front, rear;
