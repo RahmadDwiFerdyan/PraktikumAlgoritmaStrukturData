@@ -1,4 +1,4 @@
-package PraktikumAlgoritmaStrukturData.Pertemuan12;
+package PraktikumAlgoritmaStrukturData.Pertemuan12.doublelinkedlists;
 
 public class DoubleLinkedListsMain {
     public static void main(String[] args) throws Exception {
