@@ -32,11 +32,10 @@ public class DoubleLinkedLists {
             while (current.next != null) {
                 current = current.next;
             }
-            Node newNode = new Node(null, item, head);
-            head.prev = newNode;
-            head = newNode;
+            Node newNode = new Node(current, item, null);
+            current.next = newNode;
+            size++;
         }
-        size++;
     }
 
     public void add(int item, int index) throws Exception {
@@ -142,6 +141,33 @@ public class DoubleLinkedLists {
         }
     }
 
-    
+    public int getFirst() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Linked List kosong!");
+        }
+        return head.data;
+    }
+
+    public int getLast() throws Exception {
+        if(isEmpty()){
+            throw new Exception("Linked List kosong!");
+        }
+        Node tmp = head;
+        while (tmp.next != null){
+            tmp = tmp.next;
+        }
+        return tmp.data;    
+    }
+
+    public int get (int index) throws Exception {
+        if (isEmpty() || index >= size){
+            throw new Exception("Linked List kosong!");
+        }
+        Node tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
 
 }
