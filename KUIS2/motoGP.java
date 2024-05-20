@@ -8,7 +8,6 @@ public class motoGP {
         this.jmlMatch = jmlMatch;
     }
 
-    // Method to add a new team to the list
     void addTeam(String team) {
         Node newNode = new Node(team, jmlMatch);
         if (head == null) {
@@ -22,7 +21,6 @@ public class motoGP {
         }
     }
 
-    // Method to update the score for a team's race
     void updateScore(String team, int matchIndex, int score) {
         Node current = head;
         while (current != null) {
@@ -34,7 +32,7 @@ public class motoGP {
         }
     }
 
-    // Method to sort the list based on total team score in descending order
+ 
     void sortDescending() {
         if (head == null || head.next == null) return;
 
@@ -59,13 +57,12 @@ public class motoGP {
         head = sorted;
     }
 
-    // Method to get the highest score in the list
     int getHighestScore() {
         if (head == null) return 0;
         return head.getskorTotal();
     }
 
-    // Method to display the team names and skor in a table format
+
     void print() {
         System.out.println("=========================================================================================================================");
         System.out.println("     |                                |___________________________________MATCH KE-_________________________|            |");
