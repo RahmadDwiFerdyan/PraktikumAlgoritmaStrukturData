@@ -8,7 +8,6 @@ public class motoGP {
         this.jmlMatch = jmlMatch;
     }
 
-    
     void addTeam(String team) {
         Node newNode = new Node(team, jmlMatch);
         if (head == null) {
@@ -22,7 +21,7 @@ public class motoGP {
         }
     }
 
-   
+
     void updateScore(String team, int matchIndex, int score) {
         Node current = head;
         while (current != null) {
@@ -64,7 +63,6 @@ public class motoGP {
         return head.getskorTotal();
     }
 
-   
     void print() {
         System.out.println("=========================================================================================================================");
         System.out.println("     |                                |___________________________________MATCH KE-_________________________|            |");

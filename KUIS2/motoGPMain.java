@@ -10,7 +10,6 @@ public class motoGPMain {
         motoGP sortedList = new motoGP(numberOfRaces);
         Scanner scanner = new Scanner(System.in);
 
-        
         dataTeam.addTeam("Team Suzuki MotoGP            ");
         dataTeam.addTeam("SIC Racing Team               ");
         dataTeam.addTeam("Red Bull KTM Factory Racing   ");
@@ -23,14 +22,14 @@ public class motoGPMain {
         dataTeam.addTeam("Avintia Raing                 ");
         dataTeam.addTeam("Aprilia Racing Team           ");
 
-        
+
         Node current = dataTeam.head;
         while (current != null) {
             sortedList.addTeam(current.team);
             current = current.next;
         }
 
-     
+
         for (int race = 0; race < numberOfRaces; race++) {
             System.out.println("Pertandingan Ke-" + (race + 1) + ":");
             current = dataTeam.head;
@@ -41,7 +40,6 @@ public class motoGPMain {
                 current = current.next;
             }
 
-          
             sortedList.sortDescending();
             System.out.println("\n## KLASEMEN " + (race + 1) + " - MOTOGP ##");
             sortedList.print();
