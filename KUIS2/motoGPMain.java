@@ -2,12 +2,11 @@ package PraktikumAlgoritmaStrukturData.KUIS2;
 
 import java.util.Scanner;
 
-
 public class motoGPMain {
     public static void main(String[] args) {
-        final int numberOfRaces = 14;
-        motoGP dataTeam = new motoGP(numberOfRaces);
-        motoGP sortedList = new motoGP(numberOfRaces);
+        int jumlahMatch = 14;
+        motoGP dataTeam = new motoGP(jumlahMatch);
+        motoGP sortedList = new motoGP(jumlahMatch);
         Scanner scanner = new Scanner(System.in);
 
         dataTeam.addTeam("Team Suzuki MotoGP            ");
@@ -22,16 +21,18 @@ public class motoGPMain {
         dataTeam.addTeam("Avintia Raing                 ");
         dataTeam.addTeam("Aprilia Racing Team           ");
 
-
         Node current = dataTeam.head;
         while (current != null) {
             sortedList.addTeam(current.team);
             current = current.next;
         }
 
+        System.out.println("KLASEMEN MOTOGP MUSIM 2020");
 
-        for (int race = 0; race < numberOfRaces; race++) {
+        for (int race = 0; race < jumlahMatch; race++) {
+            
             System.out.println("Pertandingan Ke-" + (race + 1) + ":");
+            System.out.println("Masukkan poin!");
             current = dataTeam.head;
             while (current != null) {
                 System.out.print(current.team + ": ");
@@ -41,7 +42,7 @@ public class motoGPMain {
             }
 
             sortedList.sortDescending();
-            System.out.println("\n## KLASEMEN " + (race + 1) + " - MOTOGP ##");
+            System.out.println("\n## KLASEMEN " + (race + 1) + " - MOTOGP");
             sortedList.print();
             System.out.println();
         }

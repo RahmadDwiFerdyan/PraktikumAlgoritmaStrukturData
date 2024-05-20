@@ -2,6 +2,7 @@ package PraktikumAlgoritmaStrukturData.KUIS2;
 
 public class Node {
     String team;
+    String match;
     int[] skor; 
     int skorTotal;
     Node next;

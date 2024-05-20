@@ -84,7 +84,11 @@ public class motoGP {
                 
             }
             int selisihSkor = highestScore - current.getskorTotal();
-            System.out.print("  | " + current.getskorTotal() + " [-" +selisihSkor + "]");
+            if(i==1){
+                System.out.print("  | " + current.getskorTotal());
+            } else {
+                System.out.print("  | " + current.getskorTotal() + " [-" +selisihSkor + "]");
+            }
             current = current.next;
             System.out.println();
         }
