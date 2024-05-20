@@ -11,7 +11,7 @@ public class vaksinDLLMain {
         int pilih;
 
         do {
-            System.out.println("[]");
+            System.out.println(".");
             System.out.println("=================================");
             System.out.println("| PENGANTRI VAKSIN EXTRAVAGANZA |");
             System.out.println("=================================");
