@@ -18,18 +18,18 @@ public class BinaryTree23 {
             Node23 current = root;
             while (true) {
                 if (data < current.data) {
-                    if (current.left == null) {
+                    if (current.left != null) {
+                        current = current.left;
+                    } else {
                         current.left = new Node23(data);
                         break;
-                    } else {
-                        current = current.left;
                     }
                 } else if (data > current.data) {
-                    if (current.right == null) {
+                    if (current.right != null) {
+                        current = current.right;
+                    } else {
                         current.right = new Node23(data);
                         break;
-                    } else {
-                        current = current.right;
                     }
                 } else {
                     break;
