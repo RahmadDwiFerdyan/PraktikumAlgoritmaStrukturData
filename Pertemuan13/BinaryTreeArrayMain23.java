@@ -12,15 +12,14 @@ public class BinaryTreeArrayMain23 {
     bta.add(7);
     bta.add(9);
  
-    
+    System.out.print("\nIn-Order Traversal      : ");
+    bta.traverseInOrder(0);
+    System.out.println("\n");
+
     System.out.print("\nPre-Order Traversal     : ");
     bta.traversePreOrder(0);
     System.out.println("\n");
 
-    System.out.print("\nIn-Order Traversal      : ");
-    bta.traverseInOrder(0);
-    System.out.println("\n");
-    
     System.out.print("\nPost-Order Traversal    : ");
     bta.traversePostOrder(0);
     System.out.println("\n");

@@ -166,4 +166,66 @@ public class BinaryTree23 {
         }
 
     }
+
+    void addRekursif(int data) {
+        root = rekursif(root, data);
+    }
+
+    private Node23 rekursif(Node23 current, int data) {
+        if (current == null) {
+            return new Node23(data);
+        }
+
+        if (data < current.data) {
+            current.left = rekursif(current.left, data);
+        } else if (data > current.data) {
+            current.right = rekursif(current.right, data);
+        }
+
+        return current;
+    }
+
+    int findMinim() {
+        if (isEmpty()) {
+            System.out.println("Tree is empty");
+        }
+        Node23 current = root;
+        while (current.left != null) {
+            current = current.left;
+        }
+        return current.data;
+    }
+
+    int findMaxim() {
+        if (isEmpty()) {
+            System.out.println("Tree is empty");
+        }
+        Node23 current = root;
+        while (current.right != null) {
+            current = current.right;
+        }
+        return current.data;
+    }
+
+    void tampilDataLeaf(Node23 node) {
+        if (node != null) {
+            if (node.left == null && node.right == null) {
+                System.out.print(" " + node.data);
+            }
+            tampilDataLeaf(node.left);
+            tampilDataLeaf(node.right);
+        }
+    }
+
+    int hitungJmlLeaf(Node23 node) {
+        if (node == null) {
+            return 0;
+        }
+        if (node.left == null && node.right == null) {
+            return 1;
+        }
+        return hitungJmlLeaf(node.left) + hitungJmlLeaf(node.right);
+    }
+
+
 }

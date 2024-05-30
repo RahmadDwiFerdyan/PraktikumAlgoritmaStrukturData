@@ -60,3 +60,21 @@ maka anak kiri dari node 2 berada di indeks ke  = 2*i+1 = 2*(2)+1 = 5
 dan anak kanan dari node 2 berada di indeks ke  = 2*i+2 = 2*(2)+2 = 6
 5. Apa kegunaan statement int idxLast = 6 pada praktikum 2 percobaan nomor 4?
 > statement `int idxLast = 6` digunakan untuk menginisialisai variabel idxLast dengan nilai 6, yang menunjukkan bahwa akan ada 7 nilai yang diprint atau kurang dari sama dengan indeks ke-6.
+
+## 13.4 Tugas Praktikum
+*Kode program terlampir di file didalam folder ini
+1. Buat method di dalam class BinaryTree yang akan menambahkan node dengan cara rekursif.  
+>![alt text](image-4.png)
+2. Buat method di dalam class BinaryTree untuk menampilkan nilai paling kecil dan yang paling besar yang ada di dalam tree.  
+>![alt text](image-5.png)
+3. Buat method di dalam class BinaryTree untuk menampilkan data yang ada di leaf.  
+>![alt text](image-6.png)
+4. Buat method di dalam class BinaryTree untuk menampilkan berapa jumlah leaf yang ada di dalam tree.  
+>![alt text](image-7.png)
+5. Modifikasi class BinaryTreeArray, dan tambahkan:  
+• method add(int data) untuk memasukan data ke dalam tree  
+>![alt text](image-8.png) 
+
+• method traversePreOrder() dan traversePostOrder()  
+>![alt text](image-9.png)
+
