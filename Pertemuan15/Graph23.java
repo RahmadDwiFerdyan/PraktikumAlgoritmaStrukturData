@@ -70,6 +70,31 @@ public class Graph23 {
         }
         return false;
     }
+/* 
+    if (gedung.isPath(asal, tujuan)) {
+        System.out.println("Gedung " + (char) ('A' + asal) + " dan Gedung " + (char) ('A' + tujuan) + " bertetangga");
+    } else {
+        System.out.println("Gedung " + (char) ('A' + asal) + " dan Gedung " + (char) ('A' + tujuan) + " tidak bertetangga");
+    }
+*/
+
+    public void updateJarak(int asal, int tujuan, int jarak) throws Exception {
+        for (int i = 0; i < list[asal].size(); i++) {
+            if (list[asal].get(i) == tujuan) {
+                list[asal].updateJarak(i, jarak);
+                return;
+            }
+        }
+        System.out.println("Edge tidak ditemukan!");
+    }
+
+    public int hitungEdge() {
+        int totalEdges = 0;
+        for (int i = 0; i < vertex; i++) {
+            totalEdges += list[i].size();
+        }
+        return totalEdges;
+    }
 
 
 }

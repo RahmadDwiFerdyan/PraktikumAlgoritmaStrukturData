@@ -71,4 +71,8 @@ public class DoubleLinkedList23 {
         head = null;
         size = 0;
     }
+
+    public void updateJarak(int i, int jarak) {
+        
+    }
 }
